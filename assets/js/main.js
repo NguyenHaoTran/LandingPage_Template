@@ -16,7 +16,7 @@ if(navClose) {
 }
 
 /*=============== REMOVE MENU MOBILE ===============*/
-const navLink = document.querySelectorAll('.nav__link')
+const navLink = document.querySelectorAll('.nav-link')
 
 const linkAction = () => {
     const navMenu = document.getElementById('nav-menu')
@@ -53,7 +53,7 @@ const scrollActive = () => {
         const sectionHeight = current.offsetHeight,
               sectionTop = current.offsetTop - 58,
               sectionId = current.getAttribute('id'),
-              sectionClass = document.querySelector('.nav__menu a[href*=' + sectionId + ']')
+              sectionClass = document.querySelector('.nav-menu a[href*=' + sectionId + ']')
               
         if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
                 sectionClass.classList.add('active-link')
@@ -98,8 +98,8 @@ const sr = ScrollReveal({
     delay: 200,
 })
 
-sr.reveal(`.home__img`)
-sr.reveal(`.home__data`, {origin: 'bottom'})
-sr.reveal(`.about__data`, {origin: 'left'})
-sr.reveal(`.about__img`, {origin: 'right'})
-sr.reveal(`.popular__card`, {origin: 'right'})
+sr.reveal(`.home-img`)
+sr.reveal(`.home-data`, {origin: 'bottom'})
+sr.reveal(`.about-data`, {origin: 'left'})
+sr.reveal(`.about-img`, {origin: 'right'})
+sr.reveal(`.store-card`, {origin: 'right'})

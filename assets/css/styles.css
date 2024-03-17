@@ -115,7 +115,7 @@ body.dark-theme{
   box-shadow: 0 2px 8px hsla(19, 64%, 4%, .5);
 }
 
-.dark-theme .popular-card{
+.dark-theme .store-card{
   box-shadow: 0 8px 20px hsla(19, 64%, 4%, .2);
 }
 
@@ -436,15 +436,15 @@ body.dark-theme{
   bottom: rotate(-15deg);
 }
 
-/*=============== POPULAR ===============*/
-.popular-container{
+/*=============== store ===============*/
+.store-container{
   padding-top: 4rem;
   grid-template-columns: 250px;
   justify-content: center;
   row-gap: 5.5rem;
 }
 
-.popular-card{
+.store-card{
   position: relative;
   background-color: var(--container-color);
   padding: 7rem 2rem 1.5rem;
@@ -454,7 +454,7 @@ body.dark-theme{
   transition: background .4s;
 }
 
-.popular-img{
+.store-img{
   width: 220px;
   position: absolute;
   inset: 0;
@@ -463,25 +463,25 @@ body.dark-theme{
   transition: transform .4s;
 }
 
-.popular-name{
+.store-name{
   font-size: var(--h3-font-size);
   font-family: var(--title-font);
   margin-bottom: .25rem;
 }
 
-.popular-description{
+.store-description{
   display: block;
   font-size: var(--smaller-font-size);
   margin-bottom: 1rem;
 }
 
-.popular-price{
+.store-price{
   font-size: var(--h3-font-size);
   font-weight: var(--font-medium);
   color: var(--first-color);
 }
 
-.popular-button{
+.store-button{
   display: flex;
   background-color: var(--first-color);
   padding: 6px;
@@ -497,11 +497,11 @@ body.dark-theme{
   transition: backgroud .3s;
 }
 
-.popular-button:hover{
+.store-button:hover{
   background-color: var(--first-color-alt);
 }
 
-.popular-card:hover .popular-img{
+.store-card:hover .store-img{
   transform: translateY(-.25rem);
 }
 
@@ -895,7 +895,7 @@ body.dark-theme{
     box-shadow: none;
   }
 
-  .popular-container{
+  .store-container{
     grid-template-columns: repeat(2, 250px);
   }
 
@@ -979,22 +979,22 @@ body.dark-theme{
     width: 450px;
   }
 
-  .popular-container{
+  .store-container{
     grid-template-columns: repeat(3,262px);
     column-gap: 3.5rem;
     padding-block: 6rem 4rem;
   }
 
-  .popular-card{
+  .store-card{
     padding: 7.5rem 2rem 2rem;
     border-radius: 1.5rem;
   }
 
-  .popular-img{
+  .store-img{
     width: 230px;
   }
 
-  .popular-button{
+  .store-button{
     bottom: 2rem;
   }
 
