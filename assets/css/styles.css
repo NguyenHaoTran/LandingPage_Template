@@ -8,9 +8,9 @@
   --first-color: hsl(78, 11%, 47%);
   --first-color-alt: hsl(78, 11%, 42%);
   --title-color: hsl(78, 13%, 27%);
-  --text-color: hsl(78, 5%, 54%);
+  --text-color: hsl(78, 5%, 43%);
   --text-color-light: hsl(78, 10%, 71%);
-  --body-color: hsl(78, 16%, 86%);
+  --body-color: hsl(43, 50%, 91%);
   --container-color: hsl(19, 100%, 97%);
 
   /*========== Font and typography ==========*/
@@ -98,11 +98,11 @@ img {
 
 /*========== Variables Dark theme ==========*/
 body.dark-theme{
-  --first-color: hsl(19, 64%, 58%);
-  --first-color-alt: hsl(19, 64%, 54%);
-  --title-color: hsl(19, 16%, 85%);
-  --text-color: hsl(19, 24%, 65%);
-  --body-color: hsl(19, 12%, 8%);
+  --first-color: hsl(78, 11%, 47%);
+  --first-color-alt: hsl(78, 11%, 42%);
+  --title-color: hsl(79, 23%, 84%);
+  --text-color: hsl(83, 24%, 87%);
+  --body-color: hsl(75, 7%, 12%);
   --container-color: hsl(19, 10%, 10%);
 }
 
