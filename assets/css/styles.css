@@ -11,7 +11,9 @@
   --text-color: hsl(78, 5%, 43%);
   --text-color-light: hsl(78, 10%, 71%);
   --body-color: hsl(43, 50%, 91%);
+  --nav-color: rgba(244, 237, 221, 0.1);
   --container-color: hsl(19, 100%, 97%);
+  --button-color: rgba(125, 133, 107, 0.5);
 
   /*========== Font and typography ==========*/
   --body-font: "Poppins", sans-serif;
@@ -104,6 +106,7 @@ body.dark-theme{
   --title-color: hsl(79, 23%, 84%);
   --text-color: hsl(83, 24%, 87%);
   --body-color: hsl(75, 7%, 12%);
+  --nav-color: rgba(32, 33, 28), 0.1;
   --container-color: hsl(19, 10%, 10%);
 }
 
@@ -184,7 +187,9 @@ body.dark-theme{
 .header{
   position: fixed;
   width: 100%;
-  background-color: var(--body-color);
+  background-color: var(--nav-color);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
@@ -232,7 +237,7 @@ body.dark-theme{
 @media screen and (max-width: 767px){
   .nav-menu{
     position: fixed;
-    top: -100%;
+    top: -600%;
     left: 0;
     background-color: var(--body-color);
     width: 100%;
@@ -240,6 +245,11 @@ body.dark-theme{
     padding-block: 3.5rem;
     transition: top .4s;
   }
+}
+
+/* Show menu */
+.show-menu{
+  top: 0;
 }
 
 .nav-list{
@@ -287,11 +297,7 @@ body.dark-theme{
   bottom: 0;
   transform: rotate(-30deg);
 }
-/* Show menu */
-.show-menu{
-  top: 0;
 
-}
 
 /* Change background header */
 .bg-header{
@@ -437,7 +443,8 @@ body.dark-theme{
   display: inline-flex;
   align-items: center;
   column-gap: .5rem;
-  background-color: var(--first-color);
+  background-color: var(--button-color);
+  backdrop-filter: blur(10px);
   padding: 1rem 1.5rem;
   border-radius: 4rem;
   color: #fff;
@@ -462,10 +469,12 @@ body.dark-theme{
 /*=============== ABOUT ===============*/
 .about{
   position: relative;
+  height: 100vh;
 }
 
 .about-container{
   row-gap: 3rem;
+  padding-top: 10%;
 }
 
 .about-data{
@@ -484,13 +493,21 @@ body.dark-theme{
 }
 
 .about-img{
-  width: 300px;
+  width: 100%;
   justify-content: center;
 }
 
 /*=============== store ===============*/
+.store{
+  height: 100vh;
+}
+
+.store-subtitle{
+  padding-top: 6%;
+}
+
 .store-container{
-  padding-top: 4rem;
+  padding-top: 2rem;
   grid-template-columns: 250px;
   justify-content: center;
   row-gap: 5.5rem;
