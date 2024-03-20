@@ -12,8 +12,9 @@
   --text-color-light: hsl(78, 10%, 71%);
   --body-color: hsl(43, 50%, 91%);
   --nav-color: rgba(244, 237, 221, 0.1);
-  --container-color: hsl(19, 100%, 97%);
+  --container-color: rgb(255, 245, 240);
   --button-color: rgba(125, 133, 107, 0.5);
+  --card-color: rgba(255, 245, 240, 0.1);
 
   /*========== Font and typography ==========*/
   --body-font: "Poppins", sans-serif;
@@ -107,7 +108,8 @@ body.dark-theme{
   --text-color: hsl(83, 24%, 87%);
   --body-color: hsl(75, 7%, 12%);
   --nav-color: rgba(32, 33, 28), 0.1;
-  --container-color: hsl(19, 10%, 10%);
+  --container-color: rgb(28, 25, 23);
+  --card-color: rgba(28, 25, 23, 0.1);
 }
 
 /*========== 
@@ -422,21 +424,16 @@ body.dark-theme{
 }
 
 .buttons button{
+  background-color: var(--button-color);
+  backdrop-filter: blur(5px);
   width: 40px;
   height: 35px;
   border-radius: 8px;
   border: none;
   cursor: pointer;
   margin: 0 5px;
-  border: 1px solid #000;
   transition: 0.3s;
 }
-
-.button button:hover{
-  background: #ababab;
-  color: #fff;
-}
-
 
 /*=============== BUTTON ===============*/
 .button{
@@ -515,12 +512,14 @@ body.dark-theme{
 
 .store-card{
   position: relative;
-  background-color: var(--container-color);
+  background-color: var(--card-color);
+  backdrop-filter: blur(3px);
   padding: 7rem 2rem 1.5rem;
   box-shadow: 0 8px 20px hsla(19, 64%, 48%, .08);
   border-radius: 1rem;
   text-align: center;
   transition: background .4s;
+  border: 1px solid var(--button-color);
 }
 
 .store-img{
@@ -570,42 +569,83 @@ body.dark-theme{
   background-color: var(--first-color-alt);
 }
 
-.store-card:hover .store-img{
-  transform: translateY(-.25rem);
+.store-card:hover{
+  backdrop-filter: 1px;
 }
 
-/*=============== RECENTLY ===============*/
-.recently{
+.store .store_img_backround{
+  width: 100%;
+  padding-top: 10%;
+  position: absolute;
+  opacity: .1;
+}
+
+.store .film_roll{
+  position: absolute;
+  width: 30%;
+  transform: rotate(165deg);
+  right: 30px;
+}
+
+.store .film_roll_2{
+  position: absolute;
+  width: 45%;
+  transform: rotate(-30deg);
+  left: -20px;
+}
+
+/*=============== gallery ===============*/
+.gallery{
   position: relative;
   align-items: center;
-}
-
-.recently-container{
-  row-gap: 4rem;
+  height: 100vh;
   
 }
 
-.recently-data{
-  position: relative;
-  text-align: center;
+.gallery-container{
+  padding-top: 10%;
+  padding-top: 10%;
 }
 
-.recently-description{
-  margin-bottom: 2rem;
+.gallery img{
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  display: inline-block;
 }
 
-.recently-data-img{
-  width: 25px;
-  position: absolute;
-  top: 3.5rem;
-  right: 1.5rem;
-  transform: rotate(30deg);
-}
-
-/* .recently-img{
-  width: 300px;
+.gallery .grid-wrapper > img{
+  display: flex;
   justify-content: center;
-} */
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.gallery .grid-wrapper{
+  display: grid;
+  grid: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: 200px;
+  grid-auto-flow: dense;
+}
+
+.grid-wrapper .wide{
+  grid-column: span 2;
+}
+
+.grid-wrapper .tall{
+  grid-row: span 2;
+}
+
+.grid-wrapper .big{
+  grid-column:  span 2;
+  grid-row: span 2;
+}
 
 /*=============== NEWSLETTER ===============*/
 .newsletter-container{
@@ -827,9 +867,6 @@ body.dark-theme{
     font-size: 2rem;
   }
 
-   .recently-data-img{
-    right: 5rem;
-   }
 
    .newsletter-content{
     padding: 6rem 1rem 2rem;
@@ -867,7 +904,7 @@ body.dark-theme{
 @media screen and (min-width: 576px){
   .home-container,
   .about-container,
-  .recently-container,
+  .gallery-container,
   .newsletter-container{
     grid-template-columns: .7fr;
     justify-content: center;
@@ -1018,7 +1055,7 @@ body.dark-theme{
     bottom: 2rem;
   }
 
-  .recently-container{
+  .gallery-container{
     grid-template-columns: 350px 480px;
     align-items: center;
     column-gap: center;
@@ -1026,18 +1063,18 @@ body.dark-theme{
     padding-bottom: 2rem;
   }
 
-  .recently-data,
-  .recently .section-subtitle{
+  .gallery-data,
+  .gallery .section-subtitle{
     text-align: initial;
   }
 
-  .recently-data-img{
+  .gallery-data-img{
     width: 30px;
     top: 5.5rem;
     right: 2.5rem;
   }
 
-  .recently-img{
+  .gallery-img{
     width: 480px;
   }
 
