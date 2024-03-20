@@ -598,13 +598,14 @@ body.dark-theme{
 .gallery{
   position: relative;
   align-items: center;
-  height: 100vh;
-  
+  justify-content: center;
+  height: 100%;
 }
 
 .gallery-container{
-  padding-top: 10%;
-  padding-top: 10%;
+  max-width: 1200px;
+  padding-top: 6%;
+  padding-left: 20%;
 }
 
 .gallery img{
@@ -612,6 +613,11 @@ body.dark-theme{
   height: auto;
   vertical-align: middle;
   display: inline-block;
+}
+
+.gallery img:hover{
+  transform: scale(1.3);
+  transition: 0.5s;
 }
 
 .gallery .grid-wrapper > img{
@@ -622,7 +628,7 @@ body.dark-theme{
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 5px;
+  
   padding: 5px;
 }
 
