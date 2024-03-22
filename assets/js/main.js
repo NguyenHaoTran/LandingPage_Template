@@ -98,11 +98,14 @@ const sr = ScrollReveal({
     delay: 200,
 })
 
-sr.reveal(`.home-img`)
-sr.reveal(`.home-data`, {origin: 'bottom'})
+
 sr.reveal(`.about-data`, {origin: 'left'})
 sr.reveal(`.about-img`, {origin: 'right'})
 sr.reveal(`.store-card`, {origin: 'right'})
+sr.reveal(`.grid-wrapper`, {origin: 'bottom'})
+sr.reveal(`.dev_scanfilm-data`, {origin: 'right'})
+sr.reveal(`.dev_scanfilm-img`, {origin: 'bottom'})
+
 
 /*=================Slider=========================*/ 
 const next = document.querySelector('.next')
