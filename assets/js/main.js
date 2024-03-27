@@ -120,3 +120,18 @@ prev.addEventListener('click', function(){
     const items = document.querySelectorAll('.item')
     document.querySelector('.slide').prepend(items[items.length - 1])
 })
+
+/*=================navbar=navbar===================*/
+document.addEventListener("DOMContentLoaded", function() {
+    let prevScrollpos = window.scrollY || window.pageYOffset;
+    window.onscroll = function() {
+      let currentScrollPos = window.scrollY || window.pageYOffset;
+      if (prevScrollpos > currentScrollPos) {
+        document.getElementById("header").style.top = "0";
+      } else {
+        document.getElementById("header").style.top = "-100px"; // Adjust as needed
+      }
+      prevScrollpos = currentScrollPos;
+    }
+  });
+  

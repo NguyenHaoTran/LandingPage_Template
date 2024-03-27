@@ -186,13 +186,15 @@ body.dark-theme{
 .header{
   position: fixed;
   width: 100%;
-  background-color: var(--nav-color);
+  background-color: var(--body-color);
+  /* background-color: var(--nav-color);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); */
   top: 0;
   left: 0;
-  z-index: var(--z-fixed);
-  transition: box-shadow .3s, background .4s;
+  z-index: 10000;
+  transition: top 0.3s;
+  /* transition: box-shadow .3s, background .4s; */
 }
 
 .nav{
