@@ -8,11 +8,14 @@
     .section{
       padding-block: 4rem 1rem;
     }
-  
-    .home-title{
-      font-size: 2rem;
+
+    .about{
+        height: 100%;
     }
-  
+
+    .gallery {
+        height: 100%;
+    }
   
      .dev_scanfilm-content{
       padding: 6rem 1rem 2rem;
@@ -44,6 +47,10 @@
     .nav{
       padding: 0 10px 0 10px;
     }
+
+    .about{
+        height: max-content;
+    }
   }
   
   /* For medium devices */
@@ -55,7 +62,11 @@
       grid-template-columns: .7fr;
       justify-content: center;
     }
-  
+    
+    .about {
+        height: max-content;
+    }
+
     .nav{
       padding: 0 30px 0 30px;
     }
@@ -115,7 +126,7 @@
   
     .nav{
       padding: 0 30px 0 30px;
-      height: calc(var(--header-height) + 1.5rem);
+      height: var(--header-height);
     }
   
     .home-container{

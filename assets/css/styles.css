@@ -28,6 +28,7 @@
   --smaller-font-size: .75rem;
 
   /*========== Font weight ==========*/
+  --font-light: 200;
   --font-medium: 500;
   --font-semi-bold: 600;
 
@@ -257,7 +258,7 @@ body.dark-theme{
 
 .nav-link{
   color: var(--title-color);
-  font-weight: var(--font-medium);
+  font-weight: var(--font-light);
   transition: color .4s;
 }
 
@@ -563,7 +564,7 @@ body.dark-theme{
   position: absolute;
   width: 45%;
   transform: rotate(-30deg);
-  left: -20px;
+  left: -50px;
 }
 
 /*=============== dev_scanfilm ===============*/
@@ -612,7 +613,7 @@ body.dark-theme{
 
 .dev_scanfilm .film_roll_2{
   position: absolute;
-  width: 45%;
+  width: 25%;
   transform: rotate(-30deg);
   left: -20px;
 }
