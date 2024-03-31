@@ -121,7 +121,7 @@ prev.addEventListener('click', function(){
     document.querySelector('.slide').prepend(items[items.length - 1])
 })
 
-/*=================navbar=navbar===================*/
+/*=================navbar===================*/
 document.addEventListener("DOMContentLoaded", function() {
     let prevScrollpos = window.scrollY || window.pageYOffset;
     window.onscroll = function() {
