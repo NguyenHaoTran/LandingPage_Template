@@ -3,7 +3,7 @@
 
 /*=============== VARIABLES CSS ===============*/
 :root {
-  --header-height: 3.5rem;
+  --header-height: 3rem;
   /*========== Colors ==========*/
   --first-color: hsl(78, 11%, 47%);
   --first-color-alt: hsl(78, 11%, 42%);
@@ -187,14 +187,10 @@ body.dark-theme{
   position: fixed;
   width: 100%;
   background-color: var(--body-color);
-  /* background-color: var(--nav-color);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2); */
   top: 0;
   left: 0;
   z-index: 10000;
   transition: top 0.3s;
-  /* transition: box-shadow .3s, background .4s; */
 }
 
 .nav{
@@ -650,11 +646,28 @@ body.dark-theme{
   grid-row: span 2;
 }
 
-/*=============== dev_scanfilm ===============*/
-.dev_scanfilm{
-
+.gallery .gallery_img_backround{
+  width: 100%;
+  padding-top: 10%;
+  position: absolute;
+  opacity: .1;
 }
 
+.gallery .film_roll{
+  position: absolute;
+  width: 30%;
+  transform: rotate(165deg);
+  right: 30px;
+}
+
+.gallery .film_roll_2{
+  position: absolute;
+  width: 45%;
+  transform: rotate(-30deg);
+  left: -20px;
+}
+
+/*=============== dev_scanfilm ===============*/
 .dev_scanfilm .dev_scanfilm-container{
   padding-top: 6%;
   display: flex;
@@ -684,6 +697,26 @@ body.dark-theme{
   cursor: pointer;
 }
 
+.dev_scanfilm .dev_scanfilm_img_backround{
+  width: 100%;
+  padding-top: 10%;
+  position: absolute;
+  opacity: .1;
+}
+
+.dev_scanfilm .film_roll{
+  position: absolute;
+  width: 30%;
+  transform: rotate(165deg);
+  right: 30px;
+}
+
+.dev_scanfilm .film_roll_2{
+  position: absolute;
+  width: 45%;
+  transform: rotate(-30deg);
+  left: -20px;
+}
 
 
 /*=============== FOOTER ===============*/
